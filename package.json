@@ -14,6 +14,7 @@
         "stash": "ssh grohotov46_asmi@grohotov46.beget.tech \"cd grand-kg.ru && git stash\"",
         "reset_rep": "ssh grohotov46_asmi@grohotov46.beget.tech \"cd grand-kg.ru && git reset --hard\"",
         "send_vite_build": "scp -C -r public/build grohotov46_asmi@grohotov46.beget.tech:grand-kg.ru/public",
+        "migrate_rep_1": "ssh grohotov46_asmi@grohotov46.beget.tech \"cd grand-kg.ru\"",
         "migrate_rep": "ssh grohotov46_asmi@grohotov46.beget.tech \"cd grand-kg.ru && php8.5 artisan migrate\"",
         "rollback_rep": "ssh grohotov46_asmi@grohotov46.beget.tech \"cd grand-kg.ru && php8.5 artisan migrate:rollback\"",
         "seed_rep": "ssh grohotov46_asmi@grohotov46.beget.tech \"cd grand-kg.ru && php8.5 artisan DB:seed\"",
