@@ -1,0 +1,11 @@
+
+@use '../vars' as *;
+
+label{
+    font-size: 14px;
+    margin-bottom: 5px;
+
+    span.required{
+        color: red;
+    }
+}

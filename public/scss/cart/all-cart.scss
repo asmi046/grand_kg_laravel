@@ -1,0 +1,16 @@
+@use '../vars' as *;
+
+@use "cart_table_in_page";
+@use "to_card_btn";
+@use "to_cart_widget";
+@use "multi-search";
+
+.cart_icon {
+    fill: $main_color;
+}
+
+.cart_icon_loader {
+    fill: none;
+    stroke: $main_color;
+    height: 100px;
+}

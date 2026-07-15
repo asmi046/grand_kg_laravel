@@ -1,0 +1,17 @@
+@use '../vars' as *;
+
+@use "input";
+@use "label";
+@use "field";
+@use "search_input";
+
+
+form {
+    footer{
+        background-color: unset;
+    }
+
+    header{
+        background-color: unset;
+    }
+}

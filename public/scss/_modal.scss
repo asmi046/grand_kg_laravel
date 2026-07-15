@@ -1,0 +1,142 @@
+@use 'vars' as *;
+
+.popup_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 11000;
+    background-color: rgba(0, 0, 0, 0.666);
+
+    a {
+        color: black;
+    }
+}
+
+.popup {
+    width: 50%;
+    max-width: 600px;
+    min-width: 290px;
+    height: auto;
+    background-color: white;
+    margin: auto;
+    border-radius: 11px;
+    position: relative;
+    padding: 40px;
+    color: black;
+
+    &__close {
+        position: absolute;
+        top: 18px;
+        right: 15px;
+        cursor: pointer;
+        z-index: 30;
+        width: 20px;
+        height: 20px;
+
+        .sprite_icon {
+            width:100%;
+            height: 100%;
+            stroke: black;
+        }
+
+
+    }
+}
+
+.policy_descr,
+.sending_form button,
+.sending_form textarea,
+.sending_form input[type=text],
+.sending_form input[tel] {
+    margin: 0 0 20px 0;
+}
+
+.policy_descr a {
+    text-decoration: underline;
+}
+
+.sending_form {
+    display: flex;
+    flex-direction: column;
+
+    .control_wrap {
+        max-width: 100%;
+        display: flex;
+
+        button {
+            width: 50%;
+        }
+    }
+}
+
+.sub_h {
+    margin-bottom: 20px;
+}
+
+.modal_h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.policy_descr {
+    font-size: 14px;
+}
+
+.loader {
+    width: 37px;
+    height: 37px;
+    margin-left: 10px;
+    border-radius: 40px;
+
+    .sprite_icon {
+        width: 100%;
+        height: 100%;
+        stroke: $main_color;
+    }
+}
+
+.error_list_wrap {
+    display: flex;
+    flex-direction: column;
+
+    .error {
+        color: white;
+        background-color: crimson;
+        border-radius: 9px;
+        padding: 5px 15px;
+        margin-bottom: 20px;
+    }
+}
+
+.accept_message {
+    .emoji {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        padding: 30px;
+    }
+
+    .modal_h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 320px) {
+    .popup {
+        padding: 20px;
+        min-width: 250px;
+    }
+
+    .modal_h2 {
+        font-size: 38px;
+        margin-bottom: 0;
+    }
+}
