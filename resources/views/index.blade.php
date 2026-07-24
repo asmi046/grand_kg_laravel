@@ -9,6 +9,7 @@
 @section('description', $description)
 
 @section('main')
-
+    <x-hero />
+    <x-advantages />
 @endsection
 

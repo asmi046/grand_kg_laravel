@@ -2,30 +2,68 @@
 
 button,
 .button {
-    background-color: $main_color;
-    border: 1px solid $main_color;
-    color:white;
-    padding: 10px 30px;
-    cursor: pointer;
-    transition: $main_transition;
-    display: inline-block;
-    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 24px;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, $main_color 0%, $hover_color 100%);
+    color: #fff;
     font-family: $main_fonts;
-    font-size: 16px;
+    font-weight: 700;
+    box-shadow: $button_shadow;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease, transform 0.15s ease;
 
     &:hover {
-        background-color: $hover_color;
+        filter: brightness(1.05);
     }
-}
 
-.button-white {
-    background-color: white;
-    color: $main_color;
-    border: 1px solid $main_color;
-    text-decoration: none;
+    &:active {
+        transform: translateY(1px);
+    }
 
-    &:hover{
-        color: white;
-        text-decoration: none;
+    &.button-outline {
+        border: 1px solid rgba(196, 4, 28, 0.25);
+        background: transparent;
+        color: $main_color;
+        box-shadow: none;
+
+        &:hover {
+            background: $brand_soft;
+        }
+    }
+
+    &.button-ghost {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: none;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+    }
+
+    &.button-light {
+        background: #fff;
+        color: $main_color;
+        box-shadow: none;
+
+        &:hover {
+            box-shadow: 0 8px 20px rgba(196, 4, 28, 0.15);
+        }
+    }
+
+    &.button-icon {
+        flex: 0 0 auto;
+        width: 48px;
+        min-height: 48px;
+        padding: 0;
+
+        .sprite_icon {
+            width: 22px;
+            height: 22px;
+        }
     }
 }

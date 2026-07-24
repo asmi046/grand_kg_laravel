@@ -6,6 +6,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        return view('coming-soon');
+        return view('index');
+        // return view('coming-soon');
     }
 }

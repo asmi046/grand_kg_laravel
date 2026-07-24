@@ -31,6 +31,8 @@
 </head>
 
 <body>
+    <x-svg-sprite />
+    <x-site-header />
     <main id="main">
         @yield('main')
     </main>

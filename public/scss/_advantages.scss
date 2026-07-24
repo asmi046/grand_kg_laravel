@@ -1,0 +1,65 @@
+@use 'vars' as *;
+
+.advantages {
+    padding: 84px 0;
+}
+
+.section-heading {
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.info-card {
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid $line_color;
+    border-radius: $radius_md;
+    box-shadow: $shadow;
+
+    h3 {
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: $muted_color;
+    }
+}
+
+.info-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    color: #fff;
+    background: $main_color;
+    border-radius: 50%;
+
+    .sprite_icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .advantages-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 24px;
+    }
+}
