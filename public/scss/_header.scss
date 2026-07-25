@@ -69,10 +69,19 @@
         gap: 10px;
     }
 
+    .header-social-phone {
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        .site-nav {
+            display: none;
+        }
+    }
+
     @media (max-width: 820px) {
         .header-top {
-            grid-template-columns: 1fr;
-            justify-items: start;
+            justify-items: end;
         }
 
         .header-meta {
@@ -83,6 +92,16 @@
     @media (max-width: 520px) {
         .header-meta {
             gap: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header-social-phone {
+            display: inline-flex;
+        }
+
+        .header-phone {
+            display: none;
         }
     }
 }

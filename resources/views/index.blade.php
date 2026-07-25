@@ -11,5 +11,8 @@
 @section('main')
     <x-hero />
     <x-advantages />
+    <x-about />
+    <x-services />
+    <x-services-cta />
 @endsection
 

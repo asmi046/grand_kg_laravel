@@ -1,0 +1,54 @@
+@use 'vars' as *;
+
+.services-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 84px 0;
+    color: #fff;
+    text-align: center;
+    background:
+        linear-gradient(120deg, rgba(38, 35, 31, 0.82) 10%, rgba(196, 4, 28, 0.58) 100%),
+        url('../img/cta_bg.webp') center / cover no-repeat;
+}
+
+.services-cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+
+    h2 {
+        margin: 0 auto 16px;
+        max-width: 18ch;
+    }
+}
+
+.services-cta-text {
+    max-width: 52ch;
+    margin: 0 auto 32px;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.services-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+
+    .button {
+        gap: 8px;
+    }
+
+    .sprite_icon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 520px) {
+    .services-cta-actions {
+        .button {
+            width: 100%;
+        }
+    }
+}

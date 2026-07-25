@@ -1,0 +1,72 @@
+@use 'vars' as *;
+
+.services {
+    padding: 84px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px;
+    background: $surface_color;
+    border: 1px solid $line_color;
+    border-radius: $radius_md;
+    box-shadow: $shadow;
+
+    p {
+        color: $muted_color;
+    }
+}
+
+.service-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $main_color;
+
+    .sprite_icon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.service-card-num {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(196, 4, 28, 0.25);
+}
+
+.service-link {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+@media (max-width: 1100px) {
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 24px;
+    }
+}

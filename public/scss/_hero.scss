@@ -2,9 +2,9 @@
 
 // Утилита «надзаголовок» — используется в нескольких секциях
 .eyebrow {
-    margin: 0 0 14px;
+    margin: 0 0 10px;
     color: $main_color;
-    font-size: 0.85rem;
+    font-size: 0.65rem;
     font-weight: 800;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -18,7 +18,7 @@
     color: #fff;
     background:
         linear-gradient(120deg, rgba(38, 35, 31, 0.82) 10%, rgba(196, 4, 28, 0.58) 100%),
-        url("../img/about-banner.jpg") center 18% / cover no-repeat;
+        url("../img/about-banner.webp") center 18% / cover no-repeat;
 
     &::after {
         content: "";

@@ -36,6 +36,8 @@
     <main id="main">
         @yield('main')
     </main>
+
+    <x-site-footer />
 </body>
 
 </html>
