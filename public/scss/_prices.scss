@@ -1,0 +1,39 @@
+@use 'vars' as *;
+
+.prices_section {
+    padding: 60px 0;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead tr {
+        background: $main_color;
+
+        th {
+            text-align: center;
+            height: 50px;
+            color: #fff;
+            font-weight: 600;
+            padding: 0 16px;
+        }
+    }
+
+    tbody {
+        tr {
+            &.even {
+                background: #ffffff;
+            }
+
+            &.odd {
+                background: #f4f4f4;
+            }
+        }
+
+        td {
+            height: 24px;
+            padding: 8px 16px;
+        }
+    }
+}

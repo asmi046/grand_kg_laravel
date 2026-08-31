@@ -2,9 +2,13 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: $main_fonts;
     font-size: 16px;
     color: $black_color;
@@ -12,6 +16,10 @@ body {
     background:
         radial-gradient(circle at top left, rgba(196, 4, 28, 0.08), transparent 28%),
         linear-gradient(180deg, #f7f3ee 0%, #f2ede7 100%);
+}
+
+main {
+    flex: 1;
 }
 
 h1,

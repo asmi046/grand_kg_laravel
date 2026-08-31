@@ -1,7 +1,7 @@
 <footer class="site-footer" id="contacts">
     <div class="container footer-grid">
         <div class="footer-brand-col">
-            <a class="brand footer-brand" href="#hero" aria-label="Грандъ — на главную">
+            <a class="brand footer-brand" href="{{ route('home') }}" aria-label="Грандъ — на главную">
                 <img src="{{ asset('img/logo-white.svg') }}" alt="Грандъ" width="160" height="59" loading="lazy"
                     decoding="async" />
             </a>

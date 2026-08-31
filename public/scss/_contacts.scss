@@ -1,0 +1,65 @@
+@use "vars" as *;
+
+.contacts_section {
+    padding: 60px 0;
+}
+
+.contacts_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contacts_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact_item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact_label {
+    font-size: 0.65rem;
+    color: $muted_color;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact_value {
+    font-size: 1.1rem;
+    color: $black_color;
+    text-decoration: none;
+
+    &a {
+        color: $main_color;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.contacts_map {
+    min-height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        min-height: 300px;
+    }
+}

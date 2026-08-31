@@ -1,6 +1,6 @@
 <header class="site-header">
     <div class="container header-top">
-        <a class="brand" href="#hero" aria-label="Грандъ — на главную">
+        <a class="brand" href="{{ route('home') }}" aria-label="Грандъ — на главную">
             <img src="{{ asset('img/logo.svg') }}" alt="Грандъ" width="200" height="74" decoding="async" />
         </a>
 
@@ -10,32 +10,14 @@
                     <li><a href="#hero">Главная</a></li>
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#about">О компании</a></li>
-                    <li><a href="https://grand-kg.ru/prajs-uslug/">Прайс услуг</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="/prices">Прайс услуг</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
                 </ul>
             </nav>
 
-            <a class="header-phone" href="tel:+79102171919">8 (910) 217-19-19</a>
+            <a class="header-phone" href="tel:{{ contact('phone') }}">{{ contact('phone') }}</a>
 
-            <div class="header-social">
-                <a class="button button-outline button-icon" href="https://t.me/" aria-label="Telegram" target="_blank"
-                    rel="noopener">
-                    <svg class="sprite_icon">
-                        <use xlink:href="#icon-telegram"></use>
-                    </svg>
-                </a>
-                <a class="button button-outline button-icon" href="https://max.ru/" aria-label="Max" target="_blank"
-                    rel="noopener">
-                    <svg class="sprite_icon">
-                        <use xlink:href="#icon-max"></use>
-                    </svg>
-                </a>
-                <a class="button button-outline button-icon header-social-phone" href="tel:+79102171919" aria-label="Позвонить">
-                    <svg class="sprite_icon">
-                        <use xlink:href="#icon-phone"></use>
-                    </svg>
-                </a>
-            </div>
+            <x-header-social />
         </div>
     </div>
 </header>

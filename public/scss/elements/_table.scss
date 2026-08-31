@@ -1,15 +1,16 @@
-@use '../vars' as *;
+@use "../vars" as *;
 
 table {
     width: 100%;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 1px solid $gray_border_color;
+    border-left: 1px solid $gray_border_color;
 
     border-spacing: 0;
 
-    th,td {
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
+    th,
+    td {
+        border-bottom: 1px solid $gray_border_color;
+        border-right: 1px solid $gray_border_color;
         padding: 10px 15px;
         text-align: left;
     }
@@ -20,6 +21,6 @@ table {
     }
 
     tr:nth-child(2n) td {
-        background-color: #EBEBEB;
+        background-color: #ebebeb;
     }
 }
