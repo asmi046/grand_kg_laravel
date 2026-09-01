@@ -28,4 +28,6 @@
             </table>
         </div>
     </section>
+
+    <x-services-cta />
 @endsection

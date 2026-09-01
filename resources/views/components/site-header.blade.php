@@ -9,7 +9,7 @@
                 <ul>
                     <li><a href="#hero">Главная</a></li>
                     <li><a href="#services">Услуги</a></li>
-                    <li><a href="#about">О компании</a></li>
+                    <li><a href="/about">О компании</a></li>
                     <li><a href="/prices">Прайс услуг</a></li>
                     <li><a href="/contacts">Контакты</a></li>
                 </ul>
