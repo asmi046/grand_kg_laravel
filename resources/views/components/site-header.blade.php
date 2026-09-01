@@ -8,7 +8,7 @@
             <nav class="site-nav" aria-label="Основная навигация">
                 <ul>
                     <li><a href="#hero">Главная</a></li>
-                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="/services">Услуги</a></li>
                     <li><a href="/about">О компании</a></li>
                     <li><a href="/prices">Прайс услуг</a></li>
                     <li><a href="/contacts">Контакты</a></li>
