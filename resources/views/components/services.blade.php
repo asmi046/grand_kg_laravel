@@ -15,7 +15,7 @@
                 </div>
                 <h3>{{ $service->title }}</h3>
                 <p>{{ $service->short_description }}</p>
-                <a class="button button-outline service-link" href="https://grand-kg.ru/{{ $service->slug }}/">Подробнее</a>
+                <a class="button button-outline service-link" href="{{ route('services.show', $service->slug) }}">Подробнее</a>
             </article>
             @endforeach
         </div>

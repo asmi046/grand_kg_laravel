@@ -12,3 +12,4 @@ Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.ind
 Route::get('/prices', [PriceOfferController::class, 'index'])->name('prices.index');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
+Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
