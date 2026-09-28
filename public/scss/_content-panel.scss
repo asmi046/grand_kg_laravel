@@ -1,0 +1,33 @@
+@use 'vars' as *;
+
+// Унифицированный текстовый блок — визуально повторяет .about-panel,
+// но растянут на всю ширину контейнера секции.
+.content-panel {
+    padding: 40px;
+    background: $surface_color;
+    border-radius: $radius_md;
+    box-shadow: $shadow;
+
+    .eyebrow {
+        margin-bottom: 12px;
+    }
+
+    h2 {
+        margin: 0 0 20px;
+    }
+
+    p {
+        color: $muted_color;
+        line-height: 1.7;
+    }
+
+    p + p {
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 820px) {
+    .content-panel {
+        padding: 28px;
+    }
+}

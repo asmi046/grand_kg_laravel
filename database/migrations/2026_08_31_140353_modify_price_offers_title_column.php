@@ -18,11 +18,13 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
+     *
+     * Колонка намеренно не сужается обратно до 255 символов: в таблице уже
+     * могут быть заголовки длиннее 255 символов, и их обрезка при откате
+     * приводит к потере данных и предупреждениям MySQL.
      */
     public function down(): void
     {
-        Schema::table('price_offers', function (Blueprint $table) {
-            $table->string('title')->change();
-        });
+        //
     }
 };

@@ -15,7 +15,11 @@ class ServiceController extends Controller
     {
         $service = Service::where('slug', $slug)->firstOrFail();
 
-        return view('service', [
+        $view = $service->template
+            ? 'templates.services.'.$service->template
+            : 'service';
+
+        return view($view, [
             'service' => $service,
             'title' => $service->title,
             'description' => $service->short_description,

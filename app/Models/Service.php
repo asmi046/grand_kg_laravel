@@ -18,6 +18,7 @@ class Service extends Model
         'image',
         'sections',
         'order',
+        'template',
     ];
 
     protected $casts = [
