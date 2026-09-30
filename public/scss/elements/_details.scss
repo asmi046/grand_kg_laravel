@@ -2,34 +2,112 @@
 
 details {
     display: flex;
+    // Аккордеон: summary и содержимое идут друг под другом
+    flex-direction: column;
 
     summary{
         list-style: none;
+        // Скрываем стандартный маркер в WebKit-браузерах
+        &::-webkit-details-marker {
+            display: none;
+        }
+        cursor: pointer;
         border: 1px solid $gray_border_color;
-        padding: 20px  50px 20px 30px;
-        background-color: $main_color;
+        padding: 20px  60px 20px 30px;
+        background-color: $surface_alt_color;
         border-radius: $border_rad;
         position: relative;
+        font-weight: 700;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
+        // Стрелка
         &::before{
             content: "";
-            background-color: white;
+            width: 12px;
+            height: 12px;
             position: absolute;
-            border-radius: 10px;
-            width:30px;
-            height:30px;
-            right: 10px;
-            top: calc(50% - 15px);
+            right: 22px;
+            top: calc(50% - 6px);
+            border-right: 2px solid currentColor;
+            border-bottom: 2px solid currentColor;
+            transform: rotate(45deg);
+            transform-origin: center;
+            transition: transform 0.3s ease;
         }
     }
 
     &[open] summary{
-        background-color: $hover_color;
+        background-color: $main_color;
+        color: #fff;
     }
 
-    &[open] summary:before{
-        content: "";
-        transform: rotate(180deg);
+    &[open] summary::before{
+        transform: rotate(225deg);
     }
 
+    // Отступ между summary и раскрытым содержимым
+    &[open] .details-content{
+        margin-top: 16px;
+    }
+
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.details-content {
+    padding: 26px 30px 30px;
+    background-color: $gray_bg_color;
+    // Верхний бордер и скругление сверху — визуальное продолжение summary
+    border: 1px solid $gray_border_color;
+    border-radius: $border_rad;
+
+    p {
+        color: $muted_color;
+        line-height: 1.7;
+    }
+
+    p + p {
+        margin-top: 16px;
+    }
+}
+
+.details-label {
+    margin: 24px 0 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $main_color;
+}
+
+.details-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        position: relative;
+        padding-left: 22px;
+        color: $muted_color;
+        line-height: 1.6;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0.6em;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background: $main_color;
+            border-radius: 50%;
+        }
+
+        & + li {
+            margin-top: 12px;
+        }
+    }
 }

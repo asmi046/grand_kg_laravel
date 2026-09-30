@@ -3,7 +3,7 @@
     'subtitle' => 'Свяжитесь с нами и мы поможем решить вашу проблему'
 ])
 
-<section class="services-cta" aria-labelledby="services-cta-title">
+<section class="services-cta section" aria-labelledby="services-cta-title">
     <div class="container services-cta-inner">
         <h2 id="services-cta-title">{{ $title }}</h2>
         <p class="services-cta-text">{{ $subtitle }}</p>

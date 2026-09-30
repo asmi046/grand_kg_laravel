@@ -9,3 +9,15 @@
     height: 100%;
     object-fit: cover;
 }
+
+// Вертикальный стек блоков внутри контейнера секции
+.content-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    // Отступ задаёт gap стека, а не margin заголовка
+    > .section-heading {
+        margin-bottom: 0;
+    }
+}

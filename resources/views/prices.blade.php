@@ -8,7 +8,7 @@
         </div>
     </section>
 
-    <section class="prices_section">
+    <section class="prices_section section">
         <div class="container">
             <table class="price-table">
                 <thead>

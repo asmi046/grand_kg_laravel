@@ -1,4 +1,4 @@
-<section class="advantages" id="advantages">
+<section class="advantages section" id="advantages">
     <div class="container">
         <div class="section-heading">
             <p class="eyebrow">Преимущества</p>

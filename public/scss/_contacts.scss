@@ -1,9 +1,5 @@
 @use "vars" as *;
 
-.contacts_section {
-    padding: 60px 0;
-}
-
 .contacts_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

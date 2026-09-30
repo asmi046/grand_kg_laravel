@@ -11,6 +11,7 @@
 @use "elements/all-elements";
 
 @use "current";
+@use "section";
 
 @use "header";
 @use "hero";
@@ -19,6 +20,9 @@
 @use "about-section";
 @use "content-panel";
 @use "principals";
+@use "service-catalog";
+@use "numbered-cards";
+@use "complex-timeline";
 @use "services";
 @use "services-cta";
 @use "footer";

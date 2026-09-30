@@ -8,7 +8,7 @@
         </div>
     </section>
 
-    <section class="contacts_section">
+    <section class="contacts_section section">
         <div class="container">
             <div class="contacts_grid">
                 <div class="contacts_info">

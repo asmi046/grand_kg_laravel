@@ -1,7 +1,7 @@
 @use 'vars' as *;
 
 .site-footer {
-    padding: 84px 0 36px;
+    padding: $section_pad 0 36px;
     color: rgba(255, 255, 255, 0.7);
     background: $black_color;
 }

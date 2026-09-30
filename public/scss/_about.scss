@@ -1,9 +1,5 @@
 @use 'vars' as *;
 
-.about {
-    padding: 84px 0;
-}
-
 .about-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);

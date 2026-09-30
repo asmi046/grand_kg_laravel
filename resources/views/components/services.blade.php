@@ -1,4 +1,4 @@
-<section class="services" id="services" aria-labelledby="services-title">
+<section class="services section" id="services" aria-labelledby="services-title">
     <div class="container">
         <div class="section-heading">
             <p class="eyebrow">Практики</p>

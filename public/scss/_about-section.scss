@@ -1,9 +1,5 @@
 @use 'vars' as *;
 
-.about-section {
-    padding: 84px 0;
-}
-
 .about-section-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
@@ -74,10 +70,6 @@
 }
 
 @media (max-width: 520px) {
-    .about-section {
-        padding: 60px 0;
-    }
-
     .about-section-media {
         grid-template-columns: 1fr;
 

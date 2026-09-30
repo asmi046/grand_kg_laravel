@@ -1,6 +1,7 @@
 @props([
     'eyebrow' => 'Принципы работы',
     'title' => 'Наши принципы',
+    'section' => 'principals',
     'items' => [
         [
             'icon' => 'law-87',
@@ -25,18 +26,27 @@
     ],
 ])
 
-<section class="principals" id="principals">
+@props([
+    'section' => 'principals',
+    'cols' => 4,
+])
+
+<section class="{{ $section }} section" id="{{ $section }}">
     <div class="container">
         <div class="section-heading">
             <p class="eyebrow">{{ $eyebrow }}</p>
             <h2>{{ $title }}</h2>
         </div>
-        <div class="principals-grid">
+        <div class="principals-grid principals-grid--{{ $cols }}">
             @foreach($items as $item)
                 <article class="info-card">
-                    <div class="info-card-icon">
-                        <svg class="sprite_icon"><use xlink:href="#{{ $item['icon'] }}"></use></svg>
-                    </div>
+                    @if(!empty($item['icon']))
+                        <div class="info-card-icon">
+                            <svg class="sprite_icon"><use xlink:href="#{{ $item['icon'] }}"></use></svg>
+                        </div>
+                    @else
+                        <div class="info-card-num">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</div>
+                    @endif
                     <h3>{{ $item['title'] }}</h3>
                     <p>{{ $item['text'] }}</p>
                 </article>

@@ -1,4 +1,4 @@
-<section class="about" id="about">
+<section class="about section" id="about">
     <div class="container about-grid">
         <article class="about-panel">
             <header class="about-manager">

@@ -1,0 +1,13 @@
+@use 'vars' as *;
+
+// Универсальный вертикальный отступ именованных секций.
+// Значения меняются в одном месте — в _vars.scss ($section_pad / $section_pad_sm).
+.section {
+    padding: $section_pad 0;
+}
+
+@media (max-width: 820px) {
+    .section {
+        padding: $section_pad_sm 0;
+    }
+}

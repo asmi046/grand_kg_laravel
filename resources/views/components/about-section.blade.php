@@ -1,4 +1,4 @@
-<section class="about-section" aria-labelledby="about-section-title">
+<section class="about-section section" aria-labelledby="about-section-title">
     <div class="container about-section-grid">
         <div class="about-section-content">
             <span class="eyebrow">О компании</span>
