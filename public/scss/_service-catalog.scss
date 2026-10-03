@@ -66,6 +66,11 @@
     }
 }
 
+// Дополнительный блок, переданный в слот компонента
+.service-catalog-slot {
+    margin-top: 28px;
+}
+
 @media (max-width: 820px) {
     .service-catalog-grid {
         grid-template-columns: 1fr;

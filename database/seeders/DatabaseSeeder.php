@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             ContactSeeder::class,
             PriceOfferSeeder::class,
             ServiceSeeder::class,
+            PageSeeder::class,
+            MenuSeeder::class,
         ]);
 
     }

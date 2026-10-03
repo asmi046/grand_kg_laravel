@@ -32,13 +32,9 @@
     max-width: 32ch;
 }
 
-.footer-links {
-    display: grid;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
+// Ссылки наследуются от обёртки колонки, поэтому любой список
+// или компонент внутри .footer-col получает их автоматически
+.footer-col {
     a {
         color: rgba(255, 255, 255, 0.7);
         transition: color 0.2s ease;
@@ -49,19 +45,18 @@
     }
 }
 
+.footer-links {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .footer-contact {
     font-style: normal;
     display: grid;
     gap: 10px;
-
-    a {
-        color: rgba(255, 255, 255, 0.7);
-        transition: color 0.2s ease;
-
-        &:hover {
-            color: #fff;
-        }
-    }
 }
 
 .footer-bottom {

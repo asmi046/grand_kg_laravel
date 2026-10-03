@@ -32,6 +32,12 @@
     @endforeach
 </div>
 
+@if(!$slot->isEmpty())
+    <div class="service-catalog-slot">
+        {{ $slot }}
+    </div>
+@endif
+
 @if(!$bare)
         </div>
     </section>

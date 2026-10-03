@@ -2,6 +2,7 @@
     'eyebrow' => null,
     'title' => null,
     'section' => 'numbered-cards',
+    'cols' => 3,
     'bare' => false,
     'items' => [],
 ])
@@ -22,7 +23,7 @@
     </div>
 @endif
 
-<div class="numbered-cards-grid">
+<div class="numbered-cards-grid numbered-cards-grid--{{ $cols }}">
     @foreach($items as $index => $item)
         <article class="numbered-card">
             <div class="numbered-card-head">

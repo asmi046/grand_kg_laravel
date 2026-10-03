@@ -10,27 +10,12 @@
 
         <nav class="footer-col" aria-label="Навигация в подвале">
             <h2 class="footer-title">Навигация</h2>
-            <ul class="footer-links">
-                <li><a href="#hero">Главная</a></li>
-                <li><a href="#about">О компании</a></li>
-                <li><a href="https://grand-kg.ru/prajs-uslug/">Прайс услуг</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-                <li><a href="https://grand-kg.ru/privacy-policy/">Политика конфиденциальности</a></li>
-            </ul>
+            <x-menues.puncts name="Меню в подвале" />
         </nav>
 
         <nav class="footer-col" aria-label="Услуги">
             <h2 class="footer-title">Услуги</h2>
-            <ul class="footer-links">
-                <li><a href="https://grand-kg.ru/arbitrazhnye-spory/">Арбитражные споры</a></li>
-                <li><a href="https://grand-kg.ru/soprovozhdenie-procedur-bankrotstva/">Процедура банкротства</a></li>
-                <li><a href="https://grand-kg.ru/nalogovye-spory/">Налоговые споры</a></li>
-                <li><a href="https://grand-kg.ru/kompleksnoe-soprovozhdenie-biznesa/">Сопровождение бизнеса</a></li>
-                <li><a href="https://grand-kg.ru/korporativnoe-pravo/">Корпоративное право</a></li>
-                <li><a href="https://grand-kg.ru/intellektualnaja-sobstvennost/">Интеллектуальная собственность</a></li>
-                <li><a href="https://grand-kg.ru/soprovozhdenie-sdelok/">Сопровождение сделок</a></li>
-                <li><a href="https://grand-kg.ru/osparivanie-kadastrovoj-stoimosti/">Кадастровые вопросы</a></li>
-            </ul>
+            <x-menues.puncts name="Услуги" />
         </nav>
 
         <address class="footer-col footer-contact">
