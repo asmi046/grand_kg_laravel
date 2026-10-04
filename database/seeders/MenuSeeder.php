@@ -72,24 +72,6 @@ class MenuSeeder extends Seeder
                 'order' => 4,
                 'lnk' => '/#contacts',
             ],
-            [
-                'menu_name' => 'Меню в подвале',
-                'title' => 'Политика конфиденциальности',
-                'order' => 5,
-                'lnk' => '/page/politika-v-oblasti-obrabotki-personalnyx-dannyx',
-            ],
-            [
-                'menu_name' => 'Меню в подвале',
-                'title' => 'Политика использования cookie',
-                'order' => 6,
-                'lnk' => '/page/o-failax-cookie',
-            ],
-            [
-                'menu_name' => 'Меню в подвале',
-                'title' => 'Согласие на обработку персональных данных',
-                'order' => 7,
-                'lnk' => '/page/soglasie-na-obrabotku-personalnyx-dannyx',
-            ],
         ];
 
         DB::table('menus')->insert($footerNav);

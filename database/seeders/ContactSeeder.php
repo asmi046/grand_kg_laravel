@@ -89,19 +89,19 @@ class ContactSeeder extends Seeder
                 [
                     'name' => 'geo',
                     'title' => 'Гео-координаты',
-                    'value' => '51.730882, 36.187155',
+                    'value' => '51.727700, 36.164485',
                 ],
 
                 [
                     'name' => 'telegram',
                     'title' => 'Telegram',
-                    'value' => '#',
+                    'value' => 'https://t.me/A_Grokhotov',
                 ],
 
                 [
                     'name' => 'max',
                     'title' => 'Max',
-                    'value' => '#',
+                    'value' => 'https://max.ru/u/f9LHodD0cOKmN3_hBOi8AXZlgUBF5xA9QfhrJQsM-ZzOUJCEmeYA7u0Beec',
                 ],
 
             ]

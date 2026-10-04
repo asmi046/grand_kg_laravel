@@ -23,6 +23,11 @@ class ServiceController extends Controller
             'service' => $service,
             'title' => $service->title,
             'description' => $service->short_description,
+            'breadcrumbs' => [
+                ['label' => 'Главная', 'url' => route('home')],
+                ['label' => 'Услуги', 'url' => route('services.index')],
+                ['label' => $service->title, 'current' => true],
+            ],
         ]);
     }
 }

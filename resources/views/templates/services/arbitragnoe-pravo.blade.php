@@ -8,7 +8,7 @@
 
     <section class="breadcrumbs_section">
         <div class="container">
-            <x-breadcrumbs.main :title="$service->title"></x-breadcrumbs.main>
+            <x-breadcrumbs.main :breadcrumbs="$breadcrumbs" :title="$service->title"></x-breadcrumbs.main>
         </div>
     </section>
 

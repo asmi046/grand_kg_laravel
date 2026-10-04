@@ -31,4 +31,15 @@
         <p>Все права защищены © 2022</p>
         <p>ООО «Консалтинговая группа Грандъ»</p>
     </div>
+
+    <div class="container footer-legal">
+        <ul class="footer-legal__list">
+            <li><a href="/page/politika-v-oblasti-obrabotki-personalnyx-dannyx">Политика конфиденциальности</a></li>
+            <li><a href="/page/o-failax-cookie">Политика использования cookie</a></li>
+            <li><a href="/page/soglasie-na-obrabotku-personalnyx-dannyx">Согласие на обработку персональных данных</a>
+            </li>
+            <li><a href="/page/soglasie-na-publikaciiu-otzyvov-na-saite">Согласие на публикацию отзывов на сайте</a>
+            </li>
+        </ul>
+    </div>
 </footer>
