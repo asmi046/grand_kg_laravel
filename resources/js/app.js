@@ -1,6 +1,7 @@
 import { createApp } from 'vue/dist/vue.esm-bundler'
 import CookiesWarning from "./components/CookiesWarning.vue"
 import axios from 'axios';
+import "./vendor/mobile-menu/mobile-menu.js"
 
 if (document.querySelector("#modal_app")) {
     const mobile_app = createApp({

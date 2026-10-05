@@ -4,8 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a428262d06ae57091f43b58a11fc656",
+    "content-hash": "a29496772ae258f947d2059afc64c332",
     "packages": [
+        {
+            "name": "asmi046/laravel-mobile-menu",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asmi046/laravel-mobile-menu.git",
+                "reference": "0bb880cff28e1fe4fcccdd8bf5e8d6b852eb3fb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asmi046/laravel-mobile-menu/zipball/0bb880cff28e1fe4fcccdd8bf5e8d6b852eb3fb1",
+                "reference": "0bb880cff28e1fe4fcccdd8bf5e8d6b852eb3fb1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0|^11.0|^12.0|^13.0",
+                "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+                "illuminate/view": "^10.0|^11.0|^12.0|^13.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.0|^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Asmi046\\MobileMenu\\MobileMenuServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Asmi046\\MobileMenu\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "asmi046",
+                    "email": "asmi046@gmail.com"
+                }
+            ],
+            "description": "Reusable slide-in mobile menu Blade component for Laravel projects.",
+            "keywords": [
+                "blade",
+                "laravel",
+                "mobile-menu",
+                "responsive",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/asmi046/laravel-mobile-menu/issues",
+                "source": "https://github.com/asmi046/laravel-mobile-menu/tree/v1.2.0"
+            },
+            "time": "2026-10-04T23:21:27+00:00"
+        },
         {
             "name": "asmi046/site_skelet",
             "version": "1.0.49",

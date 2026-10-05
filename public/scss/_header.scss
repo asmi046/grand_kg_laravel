@@ -102,7 +102,8 @@
         display: none;
     }
 
-    @media (max-width: 1024px) {
+    // Скрываем десктопное меню там же, где появляется бургер мобильного меню (1023px)
+    @media (max-width: 1023px) {
         .menue_puncts_list {
             display: none;
         }
