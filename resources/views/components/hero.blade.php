@@ -9,7 +9,7 @@
             </p>
             <div class="hero-actions">
                 <a href="tel:{{ contact('max') }}" class="button" href="#contact-form">Записаться на консультацию</a>
-                <a class="button button-ghost" href="{{ route('services') }}">Смотреть услуги</a>
+                <a class="button button-ghost" href="{{ route('services.index') }}">Смотреть услуги</a>
             </div>
         </div>
     </div>
