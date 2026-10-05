@@ -5,19 +5,13 @@
             <h2 id="services-title">Услуги юридическим лицам</h2>
         </div>
         <div class="services-grid">
-            @foreach($services as $index => $service)
-            <article class="service-card">
-                <div class="service-card-head">
-                    <div class="service-card-icon">
-                        <svg class="sprite_icon"><use xlink:href="#{{ $service->icon }}"></use></svg>
-                    </div>
-                    <span class="service-card-num">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
-                </div>
-                <h3>{{ $service->title }}</h3>
-                <p>{{ $service->short_description }}</p>
-                <a class="button button-outline service-link" href="{{ route('services.show', $service->slug) }}">Подробнее</a>
-            </article>
+            @foreach ($services as $index => $service)
+                <x-service-card :title="$service->title" :slug="route('services.show', $service->slug)" :icon="$service->icon" :description="$service->short_description"
+                    :number="$index + 1" />
             @endforeach
+            <x-service-card title="Авторское право" slug="/author" icon="law-52"
+                description="Комплексная защита авторских прав, включая консультации и сопровождение в судах."
+                number="5" />
         </div>
     </div>
 </section>

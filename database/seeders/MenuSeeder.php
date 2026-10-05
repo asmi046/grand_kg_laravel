@@ -13,12 +13,7 @@ class MenuSeeder extends Seeder
     public function run(): void
     {
         $mainMenu = [
-            [
-                'menu_name' => 'Главное меню',
-                'title' => 'Главная',
-                'order' => 1,
-                'lnk' => '/#hero',
-            ],
+
             [
                 'menu_name' => 'Главное меню',
                 'title' => 'Услуги',
@@ -27,20 +22,26 @@ class MenuSeeder extends Seeder
             ],
             [
                 'menu_name' => 'Главное меню',
-                'title' => 'О компании',
+                'title' => 'О нас',
                 'order' => 3,
                 'lnk' => '/about',
             ],
             [
                 'menu_name' => 'Главное меню',
-                'title' => 'Прайс услуг',
+                'title' => 'Цены',
                 'order' => 4,
                 'lnk' => '/prices',
             ],
             [
                 'menu_name' => 'Главное меню',
-                'title' => 'Контакты',
+                'title' => 'Авторское право',
                 'order' => 5,
+                'lnk' => '/author',
+            ],
+            [
+                'menu_name' => 'Главное меню',
+                'title' => 'Контакты',
+                'order' => 6,
                 'lnk' => '/contacts',
             ],
         ];
@@ -56,20 +57,26 @@ class MenuSeeder extends Seeder
             ],
             [
                 'menu_name' => 'Меню в подвале',
-                'title' => 'О компании',
+                'title' => 'О нас',
                 'order' => 2,
                 'lnk' => '/#about',
             ],
             [
                 'menu_name' => 'Меню в подвале',
-                'title' => 'Прайс услуг',
+                'title' => 'Цены',
                 'order' => 3,
                 'lnk' => '/prices',
             ],
             [
                 'menu_name' => 'Меню в подвале',
-                'title' => 'Контакты',
+                'title' => 'Авторское право',
                 'order' => 4,
+                'lnk' => '/author',
+            ],
+            [
+                'menu_name' => 'Меню в подвале',
+                'title' => 'Контакты',
+                'order' => 5,
                 'lnk' => '/#contacts',
             ],
         ];
