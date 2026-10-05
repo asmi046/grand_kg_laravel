@@ -8,8 +8,8 @@
                 усилий, чтобы наши клиенты были №1 в своем.
             </p>
             <div class="hero-actions">
-                <a class="button" href="#contact-form">Записаться на консультацию</a>
-                <a class="button button-ghost" href="#services">Смотреть услуги</a>
+                <a href="tel:{{ contact('max') }}" class="button" href="#contact-form">Записаться на консультацию</a>
+                <a class="button button-ghost" href="{{ route('services') }}">Смотреть услуги</a>
             </div>
         </div>
     </div>
