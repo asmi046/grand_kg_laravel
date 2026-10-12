@@ -35,7 +35,7 @@ input[type=checkbox] {
 .check_wrapper {
     display: flex;
     flex-wrap: wrap;
-    accent-color: $main_color;
+    accent-color: var(--main-color);
     span {
         margin:  auto 0 auto 10px;
     }
@@ -55,11 +55,11 @@ textarea{
     }
 
     input {
-        accent-color: $main_color;
+        accent-color: var(--main-color);
     }
 
     span a {
-        color:$main_color;
+        color:var(--main-color);
         &:hover {
             text-decoration: underline;
         }

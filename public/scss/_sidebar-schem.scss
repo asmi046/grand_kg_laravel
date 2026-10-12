@@ -43,7 +43,7 @@
 
             a.active,
             a:hover {
-                color: $hover_color;
+                color: var(--hover-color);
 
             }
         }
@@ -90,7 +90,7 @@
     color: white;
     right:20px;
     bottom:80px;
-    background-color: $main_color;
+    background-color: var(--main-color);
     border-radius: 60px;
     font-size: 28px;
     box-shadow: $box_shadow;

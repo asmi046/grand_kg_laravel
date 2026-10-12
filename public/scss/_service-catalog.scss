@@ -34,7 +34,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #fff;
-    background: $main_color;
+    background: var(--main-color);
     border-radius: 999px;
 }
 
@@ -56,7 +56,7 @@
             left: 0;
             width: 8px;
             height: 8px;
-            background: $main_color;
+            background: var(--main-color);
             border-radius: 50%;
         }
 

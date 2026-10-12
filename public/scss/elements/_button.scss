@@ -9,7 +9,7 @@ button,
     padding: 0 24px;
     border: 0;
     border-radius: 999px;
-    background: linear-gradient(135deg, $main_color 0%, $hover_color 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--hover-color) 100%);
     color: #fff;
     font-family: $main_fonts;
     font-weight: 700;
@@ -25,13 +25,13 @@ button,
     }
 
     &.button-outline {
-        border: 1px solid rgba(196, 4, 28, 0.25);
+        border: 1px solid color-mix(in srgb, var(--main-color) 25%, transparent);
         background: transparent;
-        color: $main_color;
+        color: var(--main-color);
         box-shadow: none;
 
         &:hover {
-            background: $brand_soft;
+            background: var(--brand-soft);
         }
     }
 
@@ -47,11 +47,11 @@ button,
 
     &.button-light {
         background: #fff;
-        color: $main_color;
+        color: var(--main-color);
         box-shadow: none;
 
         &:hover {
-            box-shadow: 0 8px 20px rgba(196, 4, 28, 0.15);
+            box-shadow: 0 8px 20px color-mix(in srgb, var(--main-color) 15%, transparent);
         }
     }
 

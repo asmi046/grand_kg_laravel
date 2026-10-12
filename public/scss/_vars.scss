@@ -4,6 +4,25 @@ $hover_color: #820012;
 $brand_soft: rgba(196, 4, 28, 0.1);
 $sub_color: #5aa495;
 
+// === Раздел «Авторские права» ===
+$autor_color: #02430b;
+$autor_hover_color: #013006;
+$autor_brand_soft: rgba(2, 67, 11, 0.1);
+
+// CSS custom properties — позволяют переопределять брендовые цвета
+// на уровне конкретной страницы (например .autor_right).
+:root {
+    --main-color: #{$main_color};
+    --hover-color: #{$hover_color};
+    --brand-soft: #{$brand_soft};
+}
+
+.autor_right {
+    --main-color: #{$autor_color};
+    --hover-color: #{$autor_hover_color};
+    --brand-soft: #{$autor_brand_soft};
+}
+
 // === Нейтральные ===
 $black_color: #26231f;
 $muted_color: #666055;

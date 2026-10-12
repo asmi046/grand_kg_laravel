@@ -23,7 +23,7 @@
       color: $black_color;
 
       a {
-        color: $main_color;
+        color: var(--main-color);
         text-decoration: none;
 
         &:hover {

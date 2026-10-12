@@ -44,7 +44,7 @@
     font-size: 1.1rem;
     font-weight: 800;
     color: #fff;
-    background: $main_color;
+    background: var(--main-color);
     border-radius: 50%;
     box-shadow: $button_shadow;
 }
@@ -62,7 +62,7 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: $main_color;
+    color: var(--main-color);
 }
 
 .complex-stage-list {
@@ -87,7 +87,7 @@
             left: 0;
             width: 8px;
             height: 8px;
-            background: $main_color;
+            background: var(--main-color);
             border-radius: 50%;
         }
 

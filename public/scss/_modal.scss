@@ -96,7 +96,7 @@
     .sprite_icon {
         width: 100%;
         height: 100%;
-        stroke: $main_color;
+        stroke: var(--main-color);
     }
 }
 

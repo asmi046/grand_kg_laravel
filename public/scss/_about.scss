@@ -71,7 +71,7 @@
     padding: 28px;
     text-align: left;
     color: #fff;
-    background: linear-gradient(135deg, $main_color 0%, $hover_color 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--hover-color) 100%);
     border-radius: $radius_md;
     box-shadow: $shadow;
 }

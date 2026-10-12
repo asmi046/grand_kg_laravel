@@ -23,7 +23,7 @@
         }
 
         li::before{
-            color: $main_color;
+            color: var(--main-color);
             font-weight: bold;
             position: absolute!important;
             left:-20px;
@@ -41,7 +41,7 @@
         left: 0;
         top:7px;
         border-radius: 2px;
-        background-color: $main_color;
+        background-color: var(--main-color);
     }
 }
 

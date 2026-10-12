@@ -37,7 +37,7 @@ details {
     }
 
     &[open] summary{
-        background-color: $main_color;
+        background-color: var(--main-color);
         color: #fff;
     }
 
@@ -81,7 +81,7 @@ details {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: $main_color;
+    color: var(--main-color);
 }
 
 .details-content ul {
@@ -102,7 +102,7 @@ details {
             left: 0;
             width: 8px;
             height: 8px;
-            background: $main_color;
+            background: var(--main-color);
             border-radius: 50%;
         }
 

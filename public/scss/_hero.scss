@@ -3,7 +3,7 @@
 // Утилита «надзаголовок» — используется в нескольких секциях
 .eyebrow {
     margin: 0 0 10px;
-    color: $main_color;
+    color: var(--main-color);
     font-size: 0.65rem;
     font-weight: 800;
     letter-spacing: 0.18em;

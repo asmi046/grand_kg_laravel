@@ -1,0 +1,159 @@
+@use "vars" as *;
+
+// Стили раздела «Авторские права».
+// Все селекторы вложены в .autor_right — класс тега <body>, задаваемый
+// через @section('body-class', 'autor_right') в resources/views/author-rights.blade.php.
+// Это позволяет наследовать/переопределять классы из других разделов.
+
+.site-header .brand img.brand__img--autor,
+.site-header .brand img.brand__img--autor-white {
+    display: none;
+}
+.autor_right {
+    // Глянцевая «стеклянная» зелёная кнопка для раздела «Авторские права».
+    // Переопределяет стандартный .button из elements/_button.scss.
+    .button {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.38) 0%,
+                rgba(255, 255, 255, 0) 18%,
+                rgba(255, 255, 255, 0) 82%,
+                rgba(255, 255, 255, 0.16) 100%
+            ),
+            linear-gradient(180deg, #02430b 0%, #4fd17a 100%);
+        box-shadow:
+            0 14px 30px rgba(2, 67, 11, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3),
+            inset 0 -1px 0 rgba(0, 0, 0, 0.28);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+
+        &:hover {
+            filter: brightness(1.08);
+        }
+    }
+
+    // Варианты кнопок, которые должны оставаться без зелёного градиента.
+    .button-outline,
+    .button-icon {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .button-ghost {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+    }
+
+    .button-light {
+        background: #fff;
+        box-shadow: none;
+    }
+
+    // Логотип: на страницах раздела показываем альтернативные лого (header + footer)
+    // вместо стандартных.
+    .brand__img:not(.brand__img--autor),
+    .brand__img:not(.brand__img--autor-white) {
+        display: none;
+    }
+
+    .site-header .brand img.brand__img--autor,
+    .site-header .brand img.brand__img--autor-white {
+        display: flex;
+    }
+
+    .autor-hero {
+        position: relative;
+        overflow: hidden;
+        padding: $section_pad 0;
+        color: #fff;
+        text-align: center;
+        isolation: isolate;
+        background:
+            radial-gradient(
+                ellipse 80% 65% at 50% 45%,
+                rgba(40, 180, 110, 0.5) 0%,
+                rgba(20, 100, 60, 0.22) 40%,
+                transparent 75%
+            ),
+            linear-gradient(180deg, #021608 0%, #042a14 50%, #020a05 100%);
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            opacity: 0.35;
+            mix-blend-mode: overlay;
+            pointer-events: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0;
+            z-index: -1;
+            height: 140px;
+            background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.22));
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 540px;
+        }
+
+        .autor-hero__title {
+            margin: 0;
+            font-size: clamp(2.4rem, 5.4vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .autor-hero__subtitle {
+            margin: 22px auto 0;
+            max-width: 90ch;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .autor-hero__actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 36px;
+        }
+    }
+
+    @media (max-width: 820px) {
+        .autor-hero {
+            min-height: 540px;
+
+            .container {
+                min-height: 460px;
+            }
+        }
+    }
+
+    @media (max-width: 520px) {
+        .autor-hero {
+            min-height: 480px;
+
+            .container {
+                min-height: 400px;
+            }
+
+            .autor-hero__actions {
+                gap: 10px;
+            }
+        }
+    }
+}

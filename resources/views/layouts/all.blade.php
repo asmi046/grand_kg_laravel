@@ -30,8 +30,7 @@
     </script>
 </head>
 
-<body>
-
+<body class="site-body @yield('body-class')">
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">

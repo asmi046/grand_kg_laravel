@@ -35,7 +35,7 @@
     height: 64px;
     margin-bottom: 16px;
     color: #fff;
-    background: $main_color;
+    background: var(--main-color);
     border-radius: 50%;
 
     .sprite_icon {
@@ -56,7 +56,7 @@
     font-weight: 800;
     line-height: 1;
     color: #fff;
-    background: $main_color;
+    background: var(--main-color);
     border-radius: 50%;
 }
 

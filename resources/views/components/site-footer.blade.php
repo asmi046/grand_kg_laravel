@@ -2,8 +2,10 @@
     <div class="container footer-grid">
         <div class="footer-brand-col">
             <a class="brand footer-brand" href="{{ route('home') }}" aria-label="Грандъ — на главную">
-                <img src="{{ asset('img/logo-white.svg') }}" alt="Грандъ" width="160" height="59" loading="lazy"
-                    decoding="async" />
+                <img class="brand__img" src="{{ asset('img/logo-white.svg') }}" alt="Грандъ" width="160" height="59"
+                    loading="lazy" decoding="async" />
+                <img class="brand__img brand__img--autor-white" src="{{ asset('img/grand_ap_white.svg') }}" alt="Грандъ"
+                    width="160" height="59" loading="lazy" decoding="async" hidden />
             </a>
             <p class="footer-copy">Эффективные правовые решения для бизнеса в Курске.</p>
         </div>

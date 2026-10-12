@@ -5,7 +5,7 @@
     border-collapse: collapse;
 
     thead tr {
-        background: $main_color;
+        background: var(--main-color);
 
         th {
             text-align: center;

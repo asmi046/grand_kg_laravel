@@ -6,11 +6,11 @@
 @use "multi-search";
 
 .cart_icon {
-    fill: $main_color;
+    fill: var(--main-color);
 }
 
 .cart_icon_loader {
     fill: none;
-    stroke: $main_color;
+    stroke: var(--main-color);
     height: 100px;
 }
