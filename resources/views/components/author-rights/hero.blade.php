@@ -1,7 +1,7 @@
 @props([
     'title' => '',
     'subtitle' => '',
-    'buttonText' => 'Записаться на консультацию',
+    'buttonText' => 'Будем рады ответить на ваши вопросы',
     'buttonHref' => '#contact-form',
 ])
 
