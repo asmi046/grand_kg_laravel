@@ -36,7 +36,7 @@ class MenuSeeder extends Seeder
                 'menu_name' => 'Главное меню',
                 'title' => 'Авторское право',
                 'order' => 5,
-                'lnk' => '/author',
+                'lnk' => '/avtor',
             ],
             [
                 'menu_name' => 'Главное меню',
