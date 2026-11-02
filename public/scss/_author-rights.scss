@@ -5,8 +5,11 @@
 // через @section('body-class', 'autor_right') в resources/views/author-rights.blade.php.
 // Это позволяет наследовать/переопределять классы из других разделов.
 
+// .site-footer .brand img.brand__img--autor,
+// .site-footer .brand img.brand__img--autor-white,
+.site-header .header-phone-autor,
 .site-header .brand img.brand__img--autor,
-.site-header .brand img.brand__img--autor-white {
+.site-footer .brand img.brand__img--autor {
     display: none;
 }
 .autor_right {
@@ -52,13 +55,15 @@
 
     // Логотип: на страницах раздела показываем альтернативные лого (header + footer)
     // вместо стандартных.
+    .site-header .header-phone:not(.header-phone-autor),
     .brand__img:not(.brand__img--autor),
     .brand__img:not(.brand__img--autor-white) {
         display: none;
     }
 
+    .site-header .header-phone-autor,
     .site-header .brand img.brand__img--autor,
-    .site-header .brand img.brand__img--autor-white {
+    .site-footer .brand img.brand__img--autor {
         display: flex;
     }
 
@@ -182,7 +187,7 @@
     .services-cta {
         background:
             linear-gradient(120deg, rgba(38, 35, 31, 0.82) 10%, rgba(2, 67, 11, 0.58) 100%),
-            url('../img/cta_bg.webp') center / cover no-repeat;
+            url("../img/cta_bg.webp") center / cover no-repeat;
     }
 
     .brand-character-polaroid {
@@ -196,7 +201,9 @@
             0 24px 60px rgba(0, 0, 0, 0.12);
         max-width: 450px;
         transform: translateX(40px) rotate(-2.5deg);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        transition:
+            transform 0.4s ease,
+            box-shadow 0.4s ease;
 
         &:hover {
             transform: translateX(40px) rotate(0deg) scale(1.02);

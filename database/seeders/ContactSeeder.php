@@ -23,13 +23,19 @@ class ContactSeeder extends Seeder
                 [
                     'name' => 'phone',
                     'title' => 'Телефон',
-                    'value' => '8 (910) 217-19-19',
+                    'value' => '+7 (910) 217-19-19',
                 ],
 
                 [
                     'name' => 'phone_2',
                     'title' => 'Телефон',
-                    'value' => '8 (951) 076-18-19',
+                    'value' => '+7 (951) 076-18-19',
+                ],
+
+                [
+                    'name' => 'phone_autor',
+                    'title' => 'Телефон',
+                    'value' => '+7 (977) 822-27-77',
                 ],
 
                 [
