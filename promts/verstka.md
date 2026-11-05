@@ -172,3 +172,23 @@ resources/views/author-section.blade.php
 Хочу чтобы autor-hero-section в подразделе имел другую компановку: в нем менялись бы местами .autor-hero-section**media и .autor-hero-section**content
 
 Давай реализуем это при помощи стилей и параметра передаваемого в компонет реализующий эту верстку.
+
+---
+
+В компонетах
+
+resources/views/components/author-rights/hero-section.blade.php
+
+resources/views/components/author-rights/hero.blade.php
+
+Есть кнопка/ссылка с текстом Будем рады ответить на ваши вопросы сделай ее ссылко на чат в телеграмм с пользователем @grand_avtor
+
+Ник пользователя помести в сидер с контактами
+
+Так же верни в компонет
+
+resources/views/components/author-rights/hero-section.blade.php
+
+блок с классом .autor-hero\_\_subtitle но сделай так чтобы он не показывался если не передан параметр.
+
+И в подразделах сделай вывод в него цены.

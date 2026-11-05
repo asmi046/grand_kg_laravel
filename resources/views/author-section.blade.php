@@ -8,8 +8,7 @@
         :image="$section->img_url"
         :image-alt="$section->title"
         :caption="$section->number ? 'Направление ' . str_pad((string) $section->number, 2, '0', STR_PAD_LEFT) : ''"
-        button-text="Будем рады ответить на ваши вопросы"
-        :button-href="route('contacts.index')" />
+        button-text="Будем рады ответить на ваши вопросы" />
 
     <section class="breadcrumbs_section">
         <div class="container">

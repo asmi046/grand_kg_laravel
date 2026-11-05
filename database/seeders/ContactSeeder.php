@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use DB;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Cache;
 
 class ContactSeeder extends Seeder
 {
@@ -105,6 +106,12 @@ class ContactSeeder extends Seeder
                 ],
 
                 [
+                    'name' => 'telegram_autor',
+                    'title' => 'Telegram',
+                    'value' => '@grand_avtor',
+                ],
+
+                [
                     'name' => 'max',
                     'title' => 'Max',
                     'value' => 'https://max.ru/u/f9LHodD0cOKmN3_hBOi8AXZlgUBF5xA9QfhrJQsM-ZzOUJCEmeYA7u0Beec',
@@ -112,5 +119,10 @@ class ContactSeeder extends Seeder
 
             ]
         );
+
+        // Сидер пишет напрямую в таблицу и обходит модель,
+        // поэтому сбрасываем кэш контактов вручную.
+        Cache::forget('all_contacts_name');
+        Cache::forget('all_contacts_title');
     }
 }

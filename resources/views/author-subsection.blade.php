@@ -5,11 +5,11 @@
 @section('main')
     <x-author-rights.hero-section
         :title="$subsection->title"
+        :subtitle="$subsection->price_label"
         :image="$subsection->img_url"
         :image-alt="$subsection->title"
         :caption="$subsection->number_label ? 'Направление ' . $subsection->number_label : ''"
         button-text="Будем рады ответить на ваши вопросы"
-        :button-href="route('contacts.index')"
         reverse />
 
     <section class="breadcrumbs_section">

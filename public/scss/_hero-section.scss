@@ -57,6 +57,17 @@
         min-width: 0;
     }
 
+    // Подзаголовок. Класс переиспользован из hero, поэтому оформление
+    // повторяем здесь — чтобы секция оставалась самостоятельной
+    // и не зависела от правил .autor-hero.
+    .autor-hero__subtitle {
+        margin: 22px 0 0;
+        max-width: 90ch;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.82);
+    }
+
     &__title {
         margin: 0;
         font-size: clamp(2.4rem, 5.4vw, 4.5rem);

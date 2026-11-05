@@ -72,3 +72,22 @@ if (! function_exists('contact')) {
         return Contact::allFromCacheName()->get($name)?->value;
     }
 }
+
+// Ссылка на чат в Telegram по нику пользователя из таблицы контактов
+if (! function_exists('telegram_chat_link')) {
+    function telegram_chat_link(string $name = 'telegram_autor'): ?string
+    {
+        $username = trim((string) contact($name));
+
+        if ($username === '') {
+            return null;
+        }
+
+        // В контактах может лежать либо ник (@name), либо готовая ссылка
+        if (preg_match('#^https?://#i', $username)) {
+            return $username;
+        }
+
+        return 'https://t.me/'.ltrim($username, '@');
+    }
+}

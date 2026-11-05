@@ -2,8 +2,11 @@
     'title' => '',
     'subtitle' => '',
     'buttonText' => 'Будем рады ответить на ваши вопросы',
-    'buttonHref' => '#contact-form',
 ])
+
+@php
+    $buttonLink = telegram_chat_link() ?: route('contacts.index');
+@endphp
 
 <section class="autor-hero" aria-labelledby="autor-hero-title">
     <div class="container">
@@ -12,7 +15,7 @@
             <p class="autor-hero__subtitle">{{ $subtitle }}</p>
         @endif
         <div class="autor-hero__actions">
-            <a class="button" href="{{ $buttonHref }}">{{ $buttonText }}</a>
+            <a class="button" href="{{ $buttonLink }}" target="_blank" rel="noopener">{{ $buttonText }}</a>
         </div>
     </div>
 </section>
