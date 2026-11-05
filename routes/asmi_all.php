@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthorRightsController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Page\PageController;
@@ -14,6 +15,9 @@ Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.ind
 Route::get('/prices', [PriceOfferController::class, 'index'])->name('prices.index');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 Route::get('/avtor', [AuthorRightsController::class, 'index'])->name('author-rights.index');
+Route::get('/avtor/{section}', [AuthorRightsController::class, 'show'])->name('author-rights.show');
+Route::get('/avtor/{section}/{subsection}', [AuthorRightsController::class, 'subsection'])->name('author-rights.subsection');
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
+Route::get('/company/{company}', [CompanyController::class, 'show'])->name('company.show');
 Route::get('/page/{slug}', [PageController::class, 'index'])->name('page');

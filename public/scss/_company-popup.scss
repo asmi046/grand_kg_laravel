@@ -1,0 +1,121 @@
+@use 'vars' as *;
+
+// Модальное окно карточки компании в портфолио.
+// Базовая карточка и подложка — из elements/_modal.scss (.popup, .popup_wrapper).
+
+.company-popup {
+    max-width: 560px;
+
+    &__close {
+        .sprite_icon {
+            stroke: currentColor;
+        }
+    }
+
+    &__loading {
+        margin: 0;
+        color: $muted_color;
+    }
+
+    // Логотип компании: картинка, если она есть, иначе плейсхолдер с буквой
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 96px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        background: $surface_alt_color;
+        border-radius: 16px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__placeholder {
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1;
+        color: $main_color;
+    }
+
+    &__title {
+        margin: 0 0 10px;
+    }
+
+    &__badge {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 6px 14px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #fff;
+        background: $main_color;
+        border-radius: 999px;
+    }
+
+    &__meta {
+        margin: 0 0 20px;
+    }
+
+    &__row {
+        display: flex;
+        gap: 12px;
+        padding: 8px 0;
+        border-bottom: 1px solid $line_color;
+
+        dt {
+            flex: 0 0 160px;
+            color: $muted_color;
+        }
+
+        dd {
+            margin: 0;
+            color: $black_color;
+        }
+    }
+
+    &__group {
+        margin-bottom: 20px;
+    }
+
+    &__group-title {
+        margin: 0 0 10px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $main_color;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li + li {
+            margin-top: 8px;
+        }
+
+        a {
+            color: $black_color;
+            text-decoration: none;
+
+            &:hover,
+            &:focus-visible {
+                color: $main_color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__site {
+        margin-top: 8px;
+    }
+}

@@ -38,6 +38,7 @@
 
     <x-author-rights.brand-character eyebrow="Чтобы вы не скучали" title="Знакомьтесь Тихонъ Грандович"
         image="img/autor/tihon_no_bg.webp"
+        caption="С любовью Тихонъ!"
         imageAlt="Тихонъ Грандович — Бренд-Персонаж направления Авторства, Регистраций и Креатива">
         <p>
             Мы рады представить <dfn>Бренд-Персонажа</dfn> направления Авторства, Регистраций
@@ -71,24 +72,33 @@
                 <h2 id="author-rights-services-title">Наши услуги</h2>
             </div>
             <div class="services-grid">
-                <x-service-card title="Защита авторских прав и интеллектуальной собственности" slug="#" icon="law-52"
-                    description="" :number="1" />
-                <x-service-card title="Брендинг и фирменный стиль" slug="#" icon="law-12" description=""
-                    :number="2" />
-                <x-service-card title="SMM / СММ / Позиционирование бренда в онлайн-пространстве" slug="#"
-                    icon="law-101" description="" :number="3" />
-                <x-service-card title="PR, маркетинг и аналитические изыскания" slug="#" icon="law-04" description=""
-                    :number="4" />
-                <x-service-card title="Эвенты, события, мероприятия и промоушн" slug="#" icon="law-17" description=""
-                    :number="5" />
-                <x-service-card title="Дизайн, разработка, производство и согласование рекламы" slug="#"
-                    icon="law-104" description="" :number="6" />
-                <x-service-card title="Судебная практика в авторском праве и интеллектуальной собственности" slug="#"
-                    icon="law-21" description="" :number="7" />
+                @foreach ($sections as $section)
+                    <x-service-card :title="$section->title" :slug="route('author-rights.show', $section)"
+                        :icon="$section->icon" :description="$section->description" :number="$loop->iteration" />
+                @endforeach
             </div>
         </div>
     </section>
 
+
+    <section class="portfolio section" id="portfolio">
+        <div class="container content-stack">
+            <div class="section-heading">
+                <p class="eyebrow">компетенции</p>
+                <h2>Наше портфолио</h2>
+            </div>
+
+            <x-content-panel bare>
+                <p>
+                    С гордостью и радостью – презентуем и облегчаем Вам поиск по нашему Портфолио.
+                    Алфавитный перечень, где все буквы кликабельны и все разделы активны. Приятного
+                    изучения!
+                </p>
+            </x-content-panel>
+
+            <x-author-rights.alpha-index :companies="$companies" />
+        </div>
+    </section>
 
     <x-services-cta />
 @endsection

@@ -73,33 +73,34 @@
     </main>
 
     <x-site-footer />
+
+    <x-mobile-menu>
+        <x-slot:header>
+            <a class="mm-menu__brand" href="{{ route('home') }}" aria-label="Грандъ — на главную">
+                <img src="{{ asset('img/logo.svg') }}" alt="Грандъ" width="150" height="55" decoding="async" />
+            </a>
+        </x-slot:header>
+
+        <x-slot:contacts>
+            <x-menues.puncts />
+        </x-slot:contacts>
+
+        <x-slot:footer>
+            <div class="mm-menu__contacts">
+                <a href="tel:{{ preg_replace('/[^\d+]/', '', (string) contact('phone')) }}"
+                    class="mm-menu__contact mm-menu__contact--phone">{{ contact('phone') }}</a>
+                <a href="mailto:{{ contact('email') }}"
+                    class="mm-menu__contact mm-menu__contact--email">{{ contact('email') }}</a>
+            </div>
+        </x-slot:footer>
+    </x-mobile-menu>
+
+    <div class="modal_win" id="modal_app">
+        <cookies-warning privacy-policy-link="{{ route('page', 'politika-v-oblasti-obrabotki-personalnyx-dannyx') }}"
+            cookies-info-link="{{ route('page', 'o-failax-cookie') }}"
+            privacy-policy-accept-link="{{ route('page', 'soglasie-na-obrabotku-personalnyx-dannyx') }}"></cookies-warning>
+        <company-modal></company-modal>
+    </div>
 </body>
-
-<x-mobile-menu>
-    <x-slot:header>
-        <a class="mm-menu__brand" href="{{ route('home') }}" aria-label="Грандъ — на главную">
-            <img src="{{ asset('img/logo.svg') }}" alt="Грандъ" width="150" height="55" decoding="async" />
-        </a>
-    </x-slot:header>
-
-    <x-slot:contacts>
-        <x-menues.puncts />
-    </x-slot:contacts>
-
-    <x-slot:footer>
-        <div class="mm-menu__contacts">
-            <a href="tel:{{ preg_replace('/[^\d+]/', '', (string) contact('phone')) }}"
-                class="mm-menu__contact mm-menu__contact--phone">{{ contact('phone') }}</a>
-            <a href="mailto:{{ contact('email') }}"
-                class="mm-menu__contact mm-menu__contact--email">{{ contact('email') }}</a>
-        </div>
-    </x-slot:footer>
-</x-mobile-menu>
-
-<div class="modal_win" id="modal_app">
-    <cookies-warning privacy-policy-link="{{ route('page', 'politika-v-oblasti-obrabotki-personalnyx-dannyx') }}"
-        cookies-info-link="{{ route('page', 'o-failax-cookie') }}"
-        privacy-policy-accept-link="{{ route('page', 'soglasie-na-obrabotku-personalnyx-dannyx') }}" />
-</div>
 
 </html>

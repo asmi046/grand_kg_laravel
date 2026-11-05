@@ -23,6 +23,9 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             PageSeeder::class,
             MenuSeeder::class,
+            AuthorSectionSeeder::class,
+            AuthorSubsectionSeeder::class,
+            CompanySeeder::class,
         ]);
 
     }

@@ -23,3 +23,7 @@
 }
 
 $font-family-montserrat: "Montserrat", sans-serif;
+
+// Bad Script подключается через resources/css/app.css — там Vite собирает
+// файлы шрифта и подставляет корректные пути к ассетам (в т.ч. в dev-режиме).
+$font-family-bad-script: "Bad Script", cursive;

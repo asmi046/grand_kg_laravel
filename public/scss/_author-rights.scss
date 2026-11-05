@@ -190,40 +190,16 @@
             url("../img/cta_bg.webp") center / cover no-repeat;
     }
 
+    // Смещение «полароида» под колонку с текстом.
+    // Сам блок оформлен глобально — в _brand-character-polaroid.scss.
     .brand-character-polaroid {
-        margin: 0;
-        padding: 14px 14px 64px;
-        background: #fdfcf8;
-        border-radius: 2px;
-        box-shadow:
-            0 1px 2px rgba(0, 0, 0, 0.06),
-            0 12px 32px rgba(0, 0, 0, 0.18),
-            0 24px 60px rgba(0, 0, 0, 0.12);
-        max-width: 450px;
-        transform: translateX(40px) rotate(-2.5deg);
-        transition:
-            transform 0.4s ease,
-            box-shadow 0.4s ease;
+        --polaroid-shift: 40px;
+    }
 
-        &:hover {
-            transform: translateX(40px) rotate(0deg) scale(1.02);
-            box-shadow:
-                0 1px 2px rgba(0, 0, 0, 0.06),
-                0 16px 40px rgba(0, 0, 0, 0.2),
-                0 32px 72px rgba(0, 0, 0, 0.14);
-        }
-
-        img {
-            display: block;
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 1px;
-            box-shadow:
-                inset 0 0 0 1px rgba(0, 0, 0, 0.12),
-                inset 0 2px 6px rgba(0, 0, 0, 0.18),
-                inset 0 -1px 2px rgba(0, 0, 0, 0.08);
+    // Карточка подраздела повторяет .service-card, но без краткого описания.
+    .author-subsection-card {
+        .service-card-head {
+            align-items: center;
         }
     }
 
@@ -231,12 +207,6 @@
         .brand-character-grid {
             grid-template-columns: 1fr;
             gap: 40px;
-        }
-
-        .brand-character-polaroid {
-            max-width: 320px;
-            margin: 0 auto;
-            transform: rotate(0deg);
         }
     }
 }
